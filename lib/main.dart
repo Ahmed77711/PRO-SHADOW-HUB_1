@@ -62,7 +62,7 @@ List<Tutorial> tutorials = [
       'تأكد من إدخال تاريخ ميلاد فوق 18 سنة.',
       'تفاعل مع فيديوهات بريطانية لمدة يومين لتثبيت الحساب.',
     ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial',
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial'
   ),
   Tutorial(
     title: 'حساب ياباني 🇯🇵',
