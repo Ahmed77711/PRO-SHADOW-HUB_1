@@ -118,8 +118,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0F0F13), // خلفية داكنة فخمة
-        primaryColor: const Color(0xFFD4AF37), // لون ذهبي
+        scaffoldBackgroundColor: const Color(0xFF0F0F13), 
+        primaryColor: const Color(0xFFD4AF37), 
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -244,7 +244,6 @@ class DetailScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            // الكارت العلوي
             Container(
               height: 160,
               width: double.infinity,
@@ -272,7 +271,6 @@ class DetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             
-            // قائمة الخطوات
             Expanded(
               child: ListView.builder(
                 itemCount: tutorial.steps.length,
@@ -326,7 +324,6 @@ class DetailScreen extends StatelessWidget {
             
             const SizedBox(height: 16),
             
-            // زر اليوتيوب
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
