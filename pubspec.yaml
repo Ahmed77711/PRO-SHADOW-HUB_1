@@ -1,15 +1,125 @@
-name: pro_shadow_hub_1
-description: A professional task manager built with Flutter.
-publish_to: 'none'
-version: 1.0.0+1
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
+void main() {
+  runApp(const ProShadowHubApp());
+}
 
-dependencies:
-  flutter:
-    sdk: flutter
-  shared_preferences: ^2.2.2
+class ProShadowHubApp extends StatelessWidget {
+  const ProShadowHubApp({super.key});
 
-flutter:
-  uses-material-design: true
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'PRO SHADOW HUB',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(0xFF030712),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFF3B82F6),
+          secondary: Color(0xFFF59E0B),
+          surface: Color(0xFF0F172A),
+        ),
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> 
+  final String telegramUrl = 'https://t.me/+ADCq_-JXiuE3NGU0';
+
+  final List<Map<String, dynamic>> itemsList = [
+    {
+      'title': '💳 طريقة إضافة فيزا وهمية مفعلة',
+      'subtitle': 'شرح مباشر لطريقة إنشاء وتفعيل الفيزا الوهمية',
+      'url': 'https://www.youtube.com/results?search_query=طريقة+عمل+فيزا+وهمية+تفعيل+سوق+بلاي',
+      'icon': Icons.credit_card_rounded,
+      'color': const Color(0xFF10B981),
+    },
+    {
+      'title': '🇺🇸 طريقة صنع حساب أمريكي احترافي',
+      'subtitle': 'دليل خطوة بخطوة لإنشاء متجر وحساب أمريكي بالكامل',
+      'url': 'https://www.youtube.com/results?search_query=طريقة+انشاء+حساب+أمريكي+سوق+بلاي',
+      'icon': Icons.flag_rounded,
+      'color': const Color(0xFF3B82F6),
+    },
+    {
+      'title': '🇯🇵 طريقة صنع حساب ياباني مميز',
+      'subtitle': 'شرح كيفية فتح حساب ياباني للحصول على الألعاب الحصرية',
+      'url': 'https://www.youtube.com/results?search_query=طريقة+انشاء+حساب+ياباني+سوق+بلاي',
+      'icon': Icons.language_rounded,
+      'color': const Color(0xFFEF4444),
+    },
+    {
+      'title': '📦 طريقة اظهار صندوق 400',
+      'subtitle': 'شرح مفصل لطريقة إظهار صندوق 400 وحل المشاكل التقنية',
+      'url': 'https://www.youtube.com/results?search_query=طريقة+اظهار+صندوق+400',
+      'icon': Icons.inventory_2_rounded,
+      'color': const Color(0xFFF59E0B),
+    },
+    {
+      'title': '🎬 أفلام متنوعة وحصرية',
+      'subtitle': 'مجموعة واسعة من أقوى الأفلام والإنتاجات العالمية',
+      'url': 'https://www.youtube.com/results?search_query=فيلم+كامل+HD',
+      'icon': Icons.movie_filter_rounded,
+      'color': const Color(0xFF8B5CF6),
+    },
+    {
+      'title': '😂 أفلام كوميدية مضحكة',
+      'subtitle': 'اضحك من قلبك مع أفضل الأفلام الكوميدية العربية',
+      'url': 'https://www.youtube.com/results?search_query=فيلم+كوميدي+عربي+كامل',
+      'icon': Icons.emoji_emotions_rounded,
+      'color': const Color(0xFFFF7043),
+    },
+  ];
+
+  Future<void> openExternalUrl(String targetUrl) async {
+    final Uri uri = Uri.parse(targetUrl);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) 
+    return Scaffold
+      appBar: AppBar(
+        title: const Text(
+          'PRO SHADOW HUB',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            letterSpacing: 2.2,
+            color: Colors.amberAccent,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color(0xFF090D16),
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.send_rounded, color: Color(0xFF3B82F6)),
+            tooltip: 'مجموعة التيليجرام',
+            onPressed: () => openExternalUrl(telegramUrl),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView
+        padding: const EdgeInsets.all(16.0),
+        child: Column
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: 
+            Container
+              padding: const EdgeInsets.all(22),
+              decoration: BoxDecoration
+                gradient: const LinearGradient
+                  colors: [Color(0xFF1E1B4B), Color(0xFF0F172A)],
+                  begin: Alignment.topLeft,
+                  
