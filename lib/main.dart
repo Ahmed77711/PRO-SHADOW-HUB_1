@@ -6,7 +6,7 @@ void main() {
 }
 
 // ==========================================
-// 1. البيانات (الموديل)
+// 1. البيانات والموديل (في نفس الملف)
 // ==========================================
 class Tutorial {
   final String title;
@@ -30,10 +30,10 @@ List<Tutorial> tutorials = [
     flag: '🇺🇸',
     gradient: [const Color(0xFF1E3C72), const Color(0xFF2A5298)],
     steps: [
-      'استخدم تطبيق VPN وقم بتوصيله بسيرفر أمريكي (USA).',
-      'افتح تطبيق التيك توك أو انستقرام واختر التسجيل برقم هاتف.',
+      'قم بتشغيل تطبيق VPN واختر سيرفر أمريكي (USA).',
+      'افتح التيك توك أو انستقرام واختر التسجيل برقم هاتف.',
       'ابحث في جوجل عن "USA Virtual Number" للحصول على رقم وهمي.',
-      'أدخل الرقم واستقبل كود التحقق.',
+      'أدخل الرقم واستقبل كود التحقق بسرعة.',
       'أكمل بياناتك واختر اهتماماتك بما يتناسب مع المحتوى الأمريكي.',
     ],
     youtubeUrl: 'https://www.youtube.com/results?search_query=create+usa+account+tutorial',
@@ -44,7 +44,7 @@ List<Tutorial> tutorials = [
     gradient: [const Color(0xFF0F2027), const Color(0xFF203A43)],
     steps: [
       'قم بتشغيل الـ VPN واختر سيرفر فرنسا (France).',
-      'افتح التطبيق المطلوب (تيك توك/سناب).',
+      'افتح التطبيق المطلوب وسجل برقم الهاتف.',
       'احصل على رقم فرنسي مؤقت من مواقع مثل SMS-Activate.',
       'أدخل الرقم وفعل الحساب.',
       'قم بتغيير لغة التطبيق للفرنسية لزيادة الأمان.',
@@ -62,7 +62,7 @@ List<Tutorial> tutorials = [
       'تأكد من إدخال تاريخ ميلاد فوق 18 سنة.',
       'تفاعل مع فيديوهات بريطانية لمدة يومين لتثبيت الحساب.',
     ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial'
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial',
   ),
   Tutorial(
     title: 'حساب ياباني 🇯🇵',
@@ -106,7 +106,7 @@ List<Tutorial> tutorials = [
 ];
 
 // ==========================================
-// 2. التطبيق والثيم (الألوان الفخمة)
+// 2. التطبيق والثيم الفخم
 // ==========================================
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -118,8 +118,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0F0F13), 
-        primaryColor: const Color(0xFFD4AF37), 
+        scaffoldBackgroundColor: const Color(0xFF0F0F13),
+        primaryColor: const Color(0xFFD4AF37),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
 }
 
 // ==========================================
-// 3. الشاشة الرئيسية (قائمة الدول)
+// 3. الشاشة الرئيسية
 // ==========================================
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -216,7 +216,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 // ==========================================
-// 4. شاشة التفاصيل (الخطوات وزر اليوتيوب)
+// 4. شاشة التفاصيل
 // ==========================================
 class DetailScreen extends StatelessWidget {
   final Tutorial tutorial;
