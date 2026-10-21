@@ -252,7 +252,7 @@ class DetailScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children:
             Container(
               height: 220,
               width: double.infinity,
