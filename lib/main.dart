@@ -2,134 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const PremiumShadowApp());
 }
 
-// ==========================================
-// 1. البيانات والموديل (في نفس الملف)
-// ==========================================
-class Tutorial {
-  final String title;
-  final String flag;
-  final List<Color> gradient;
-  final List<String> steps;
-  final String youtubeUrl;
-
-  Tutorial({
-    required this.title,
-    required this.flag,
-    required this.gradient,
-    required this.steps,
-    required this.youtubeUrl,
-  });
-}
-
-List<Tutorial> tutorials = [
-  Tutorial(
-    title: 'حساب أمريكي 🇺🇸',
-    flag: '🇺🇸',
-    gradient: [const Color(0xFF1E3C72), const Color(0xFF2A5298)],
-    steps: [
-      'قم بتشغيل تطبيق VPN واختر سيرفر أمريكي (USA).',
-      'افتح التيك توك أو انستقرام واختر التسجيل برقم هاتف.',
-      'ابحث في جوجل عن "USA Virtual Number" للحصول على رقم وهمي.',
-      'أدخل الرقم واستقبل كود التحقق بسرعة.',
-      'أكمل بياناتك واختر اهتماماتك بما يتناسب مع المحتوى الأمريكي.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+usa+account+tutorial',
-  ),
-  Tutorial(
-    title: 'حساب فرنسي 🇫🇷',
-    flag: '🇫🇷',
-    gradient: [const Color(0xFF0F2027), const Color(0xFF203A43)],
-    steps: [
-      'قم بتشغيل الـ VPN واختر سيرفر فرنسا (France).',
-      'افتح التطبيق المطلوب وسجل برقم الهاتف.',
-      'احصل على رقم فرنسي مؤقت من مواقع مثل SMS-Activate.',
-      'أدخل الرقم وفعل الحساب.',
-      'قم بتغيير لغة التطبيق للفرنسية لزيادة الأمان.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+france+account+tutorial',
-  ),
-  Tutorial(
-    title: 'حساب بريطاني 🇬🇧',
-    flag: '🇬🇧',
-    gradient: [const Color(0xFF141E30), const Color(0xFF243B55)],
-    steps: [
-      'اتصل بـ VPN سيرفر لندن (UK).',
-      'اذهب لصفحة التسجيل في التطبيق.',
-      'استخدم رقم بريطاني وهمي (+44).',
-      'تأكد من إدخال تاريخ ميلاد فوق 18 سنة.',
-      'تفاعل مع فيديوهات بريطانية لمدة يومين لتثبيت الحساب.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial',
-  ),
-  Tutorial(
-    title: 'حساب ياباني 🇯🇵',
-    flag: '🇯🇵',
-    gradient: [const Color(0xFF870000), const Color(0xFF190A05)],
-    steps: [
-      'اختر سيرفر اليابان (Japan) في الـ VPN.',
-      'حمل التطبيق من متجر ياباني أو استخدم APK.',
-      'احصل على رقم ياباني (+81).',
-      'سجل واختر اللغة اليابانية في الإعدادات.',
-      'أكمل الخطوات ولا تخرج من الـ VPN أثناء التسجيل.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+japan+account+tutorial',
-  ),
-  Tutorial(
-    title: 'حساب هونغ كونغ 🇭🇰',
-    flag: '🇭🇰',
-    gradient: [const Color(0xFF4B79A1), const Color(0xFF283E51)],
-    steps: [
-      'قم بتوصيل الـ VPN بهونغ كونغ.',
-      'استخدم بريد إلكتروني جديد (Gmail).',
-      'احصل على رقم هونغ كونغ (+852).',
-      'أدخل الكود واستقبل الرسالة.',
-      'قم بتسجيل الدخول من المتصفح أولاً لتأمين الحساب.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+hong+kong+account+tutorial',
-  ),
-  Tutorial(
-    title: 'حساب كندي 🇨🇦',
-    flag: '🇨🇦',
-    gradient: [const Color(0xFFCB356B), const Color(0xFFBD3F32)],
-    steps: [
-      'افتح الـ VPN واتصل بكندا (Canada).',
-      'افتح التطبيق واختر التسجيل.',
-      'استخدم رقم كندي (+1).',
-      'أدخل كود التحقق الذي سيصلك.',
-      'قم بتغيير المنطقة في إعدادات الحساب لتثبيت الدولة.',
-    ],
-    youtubeUrl: 'https://www.youtube.com/results?search_query=create+canada+account+tutorial',
-  ),
-];
-
-// ==========================================
-// 2. التطبيق والثيم الفخم
-// ==========================================
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PremiumShadowApp extends StatelessWidget {
+  const PremiumShadowApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'دليل الحسابات',
       debugShowCheckedModeBanner: false,
+      title: 'Shadow Tutorials',
       theme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0F0F13),
-        primaryColor: const Color(0xFFD4AF37),
+        scaffoldBackgroundColor: const Color(0xFF0A0A0F),
+        primaryColor: const Color(0xFFD4AF37), // لون ذهبي فخم
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
           centerTitle: true,
-          iconTheme: IconThemeData(color: Colors.white),
           titleTextStyle: TextStyle(
             color: Colors.white,
             fontSize: 22,
             fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
+            letterSpacing: 2.0,
           ),
         ),
       ),
@@ -139,7 +35,71 @@ class MyApp extends StatelessWidget {
 }
 
 // ==========================================
-// 3. الشاشة الرئيسية
+// 1. بيانات الدول (مع إضافة الإمارات)
+// ==========================================
+class CountryData {
+  final String title;
+  final String flag;
+  final String subtitle;
+  final List<Color> gradient;
+  final String youtubeUrl;
+
+  CountryData({
+    required this.title,
+    required this.flag,
+    required this.subtitle,
+    required this.gradient,
+    required this.youtubeUrl,
+  });
+}
+
+final List<CountryData> countries = [
+  CountryData(
+    title: 'حساب أمريكي',
+    flag: '🇺🇸',
+    subtitle: 'Google Play / Apple ID',
+    gradient: [const Color(0xFF0F52BA), const Color(0xFF041E42)],
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+usa+account+tutorial',
+  ),
+  CountryData(
+    title: 'حساب فرنسي',
+    flag: '🇫🇷',
+    subtitle: 'للمحتوى الأوروبي',
+    gradient: [const Color(0xFF002395), const Color(0xFFED2939)],
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+france+account+tutorial',
+  ),
+  CountryData(
+    title: 'حساب بريطاني',
+    flag: '🇬🇧',
+    subtitle: 'أفضل للبرامج المدفوعة',
+    gradient: [const Color(0xFF012169), const Color(0xFFC8102E)],
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uk+account+tutorial',
+  ),
+  CountryData(
+    title: 'حساب إماراتي',
+    flag: '🇦🇪',
+    subtitle: 'للمحتوى الخليجي',
+    gradient: [const Color(0xFF00732F), const Color(0xFFFF0000)], // أخضر وأحمر إماراتي
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+uae+account+tutorial',
+  ),
+  CountryData(
+    title: 'حساب ياباني',
+    flag: '🇯🇵',
+    subtitle: 'للألعاب والأنمي',
+    gradient: [const Color(0xFFBC002D), const Color(0xFF000000)],
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+japan+account+tutorial',
+  ),
+  CountryData(
+    title: 'حساب كندي',
+    flag: '🇨🇦',
+    subtitle: 'بديل ممتاز للأمريكي',
+    gradient: [const Color(0xFFFF0000), const Color(0xFF000000)],
+    youtubeUrl: 'https://www.youtube.com/results?search_query=create+canada+account+tutorial',
+  ),
+];
+
+// ==========================================
+// 2. الشاشة الرئيسية (الفخمة)
 // ==========================================
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -147,88 +107,134 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('دليل الحسابات العالمية'),
-      ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: tutorials.length,
-        itemBuilder: (context, index) {
-          final tutorial = tutorials[index];
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailScreen(tutorial: tutorial),
-                ),
-              );
-            },
-            child: Container(
-              margin: const EdgeInsets.only(bottom: 16),
-              height: 120,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: tutorial.gradient,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: tutorial.gradient.last.withOpacity(0.4),
-                    blurRadius: 15,
-                    offset: const Offset(0, 8),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  const SizedBox(width: 20),
-                  Text(
-                    tutorial.flag,
-                    style: const TextStyle(fontSize: 50),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Text(
-                      tutorial.title,
-                      style: const TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF12121A), Color(0xFF0A0A0F)],
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // العنوان الفخم
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFD4AF37).withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: const Color(0xFFD4AF37).withOpacity(0.5)),
+                      ),
+                      child: const Text(
+                        'PREMIUM • SHADOW TUTORIALS',
+                        style: TextStyle(color: Color(0xFFD4AF37), fontSize: 10, letterSpacing: 2, fontWeight: FontWeight.bold),
                       ),
                     ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white70,
-                  ),
-                  const SizedBox(width: 20),
-                ],
+                    const SizedBox(height: 16),
+                    const Text(
+                      'اختر الدولة\nوشاهد الشرح',
+                      style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900, height: 1.2),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'روابط مباشرة لشرح إنشاء الحسابات خطوة بخطوة.',
+                      style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 14),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          );
-        },
+              
+              // شبكة الدول
+              Expanded(
+                child: GridView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 0.85,
+                  ),
+                  itemCount: countries.length,
+                  itemBuilder: (context, i) {
+                    final country = countries[i];
+                    return GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => DetailScreen(country: country))),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(colors: country.gradient, begin: Alignment.topLeft, end: Alignment.bottomRight),
+                          borderRadius: BorderRadius.circular(24),
+                          boxShadow: [
+                            BoxShadow(
+                              color: country.gradient.first.withOpacity(0.3),
+                              blurRadius: 15,
+                              offset: const Offset(0, 8),
+                            )
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Positioned(right: -20, top: -20, child: Text(country.flag, style: const TextStyle(fontSize: 100, color: Colors.white10))),
+                            Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(country.flag, style: const TextStyle(fontSize: 40)),
+                                  const Spacer(),
+                                  Text(country.title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                                  const SizedBox(height: 4),
+                                  Text(country.subtitle, style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 12)),
+                                  const SizedBox(height: 12),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30)),
+                                    child: const Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(Icons.play_arrow_rounded, size: 16, color: Colors.black),
+                                        SizedBox(width: 4),
+                                        Text('شاهد', style: TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold)),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
 
 // ==========================================
-// 4. شاشة التفاصيل
+// 3. شاشة التفاصيل وزر اليوتيوب
 // ==========================================
 class DetailScreen extends StatelessWidget {
-  final Tutorial tutorial;
-  
-  const DetailScreen({super.key, required this.tutorial});
+  final CountryData country;
+  const DetailScreen({super.key, required this.country});
 
   Future<void> _openYoutube(BuildContext context) async {
-    final uri = Uri.parse(tutorial.youtubeUrl);
+    final uri = Uri.parse(country.youtubeUrl);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('مش قادر افتح اليوتيوب')),
+          const SnackBar(content: Text('تعذر فتح رابط اليوتيوب')),
         );
       }
     }
@@ -237,118 +243,50 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF0A0A0F),
       appBar: AppBar(
-        title: Text(tutorial.title),
+        title: Text('${country.flag} ${country.title}', style: const TextStyle(color: Colors.white)),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 160,
+              height: 220,
               width: double.infinity,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: tutorial.gradient,
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
+                gradient: LinearGradient(colors: country.gradient, begin: Alignment.topLeft, end: Alignment.bottomRight),
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: [
-                  BoxShadow(
-                    color: tutorial.gradient.last.withOpacity(0.3),
-                    blurRadius: 20,
-                    offset: const Offset(0, 10),
-                  ),
+                  BoxShadow(color: country.gradient.first.withOpacity(0.4), blurRadius: 20, offset: const Offset(0, 10)),
                 ],
               ),
               child: Center(
-                child: Text(
-                  tutorial.flag, 
-                  style: const TextStyle(fontSize: 70),
-                ),
+                child: Text(country.flag, style: const TextStyle(fontSize: 80)),
               ),
             ),
-            const SizedBox(height: 24),
-            
-            Expanded(
-              child: ListView.builder(
-                itemCount: tutorial.steps.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 12),
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.05),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: Colors.white.withOpacity(0.1),
-                      ),
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 30,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            color: tutorial.gradient.first,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Center(
-                            child: Text(
-                              '${index + 1}',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Text(
-                            tutorial.steps[index], 
-                            style: const TextStyle(
-                              color: Colors.white70,
-                              fontSize: 16,
-                              height: 1.5,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
+            const SizedBox(height: 40),
+            const Text(
+              'اضغط على الزر بالأسفل لمشاهدة شرح إنشاء الحساب',
+              style: TextStyle(color: Colors.white70, fontSize: 16),
+              textAlign: TextAlign.center,
             ),
-            
-            const SizedBox(height: 16),
-            
+            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
+              height: 60,
               child: ElevatedButton.icon(
                 onPressed: () => _openYoutube(context),
-                icon: const Icon(Icons.play_circle_fill, color: Colors.white),
-                label: const Text(
-                  'فتح الشرح على يوتيوب', 
-                  style: TextStyle(
-                    color: Colors.white, 
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
+                icon: const Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
+                label: const Text('مشاهدة الشرح على يوتيوب', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFFF0000),
-                  padding: const EdgeInsets.symmetric(vertical: 18),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  elevation: 8,
-                  shadowColor: Colors.red.withOpacity(0.5),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                 ),
               ),
             ),
-            const SizedBox(height: 10),
           ],
         ),
       ),
